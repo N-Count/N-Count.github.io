@@ -5,4 +5,14 @@ body {
   padding: 0;
   margin: 0;
   background-color: rgba(20, 136, 82, 0.5);
+  position: relative;
+}
+html .head,
+body .head {
+  width: 100%;
+  height: 100px;
+  background-color: rgba(153, 194, 175, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
 }
