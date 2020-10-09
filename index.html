@@ -1,26 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>网页实验</title>
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_2116604_872bp9twthp.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link
+      rel="stylesheet"
+      href="http://at.alicdn.com/t/font_2116604_872bp9twthp.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/common.css">
     <script src="./js/echarts.min.js"></script>
     <script src="./js/index.js"></script>
-</head>
-<body>
+    <script src="./js/jquery.min.js"></script>
+  </head>
+  <body>
     <div class="head">
-        <div class="headLeft">
-          <span class="iconfont icon-gudu"></span>
-        </div>
-        <div class="headCenter">
-
-        </div>
-        <div class="headRight">
-            <span class="iconfont icon-guduliangbiao"></span>
-        </div>
+      <div class="headLeft">
+        <span class="iconfont icon-gudu"></span>
+      </div>
+      <!-- onselectstart="return false;"让子元素内的文字不可选中 -->
+      <div class="headCenter" onselectstart="return false;" >
+        <span class="talk">闲言碎语</span>
+        <span class="sleep">夜不能寐</span>
+        <span class="sing">后青春的诗</span>
+        <span class="light">光&影</span>
+        <span class="do">Say Something</span>
+        <span class="will" >To Be Countinue</span>
+      </div>
+      <div class="headRight">
+        <span class="iconfont icon-guduliangbiao"></span>
+      </div>
     </div>
-    <div class="body"></div>
-</body>
+    <div class="body">
+      <div class="bodyLeft">
+        <span class="fr">
+          
+        </span>
+        <span class="fl"></span>
+        <span class="fr"></span>
+        <span class="fl"></span>
+        <span class="fr"></span>
+        <span class="fl"></span>
+      </div>
+      <div class="bodyCenter"></div>
+      <div class="bodyRight">
+        <span class="fl"></span>
+        <span class="fr"></span>
+        <span class="fl"></span>
+        <span class="fr"></span>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        (function() {
+      // 页面大小发生就重新去计算html的fontSize ==> resize 事件
+      window.onresize = function() {
+          // 1.
+          var w = window.innerWidth;
+  
+          if (w >= 1920) {
+              w = 1920;
+          }
+          if (w <= 1280) {
+              w = 1280;
+          }
+          // w / 80 基准值 24
+          document.documentElement.style.fontSize = w / 80 + "px";
+      }
+      // 页面一打开执行一次
+      window.onresize();
+  })();
+      </script>
+  </body>
 </html>
